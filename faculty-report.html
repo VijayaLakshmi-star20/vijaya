@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-wrap">
+      <header class="page-header">
+        <div>
+          <h1>Faculty Report</h1>
+          <p class="subtext">Printable subject summary and quality snapshot.</p>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-light" href="faculty-dashboard.html">Dashboard</a>
+          <a class="btn btn-primary" href="faculty-analytics.html">Analytics</a>
+          <button id="exportFacultyReport" class="btn btn-secondary" type="button">Export Report</button>
+          <a class="btn btn-outline logout-faculty" href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="card stat-card"><h3>Assignments</h3><p id="reportAssignments" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>Submissions</h3><p id="reportSubmissions" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>Reviewed</h3><p id="reportReviewed" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>Late</h3><p id="reportLate" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>Average</h3><p id="reportAverage" class="stat-value">-</p></article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Subject Summary</h2>
+        <div id="facultyReportList" class="list-stack"></div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

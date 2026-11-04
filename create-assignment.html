@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="center-page">
+      <section class="card form-card">
+        <h1>Create Assignment</h1>
+        <form id="createAssignmentForm" class="form-grid">
+          <label for="newAssignmentTitle">Assignment Title</label>
+          <input id="newAssignmentTitle" type="text" placeholder="Enter title" required />
+
+          <label for="newAssignmentSubject">Subject</label>
+          <input id="newAssignmentSubject" type="text" placeholder="Enter subject" required />
+
+          <label for="newAssignmentDescription">Description</label>
+          <textarea
+            id="newAssignmentDescription"
+            placeholder="Enter description"
+            rows="4"
+            required
+          ></textarea>
+
+          <label for="newAssignmentMaxScore">Maximum Score</label>
+          <input id="newAssignmentMaxScore" type="number" min="1" max="100" value="10" required />
+
+          <label for="newAssignmentPriority">Priority</label>
+          <select id="newAssignmentPriority" required>
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <label for="newAssignmentTags">Tags (comma separated)</label>
+          <input id="newAssignmentTags" type="text" placeholder="lab, internal, revision" />
+
+          <label for="newAssignmentDeadline">Deadline</label>
+          <input id="newAssignmentDeadline" type="date" required />
+
+          <button class="btn btn-primary" type="submit">Create</button>
+          <p id="createAssignmentMessage" class="message"></p>
+          <p id="createDraftStatus" class="subtext"></p>
+        </form>
+        <a class="text-link" href="faculty-dashboard.html">Back to Dashboard</a>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

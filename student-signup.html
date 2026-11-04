@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="center-page">
+      <section class="card form-card">
+        <h1>Student Sign Up</h1>
+        <p class="subtext">Create a student account stored in MongoDB.</p>
+        <form id="studentSignupForm" class="form-grid">
+          <label for="studentSignupName">Name</label>
+          <input id="studentSignupName" type="text" placeholder="Enter your name" required />
+
+          <label for="studentSignupRegNo">Register Number</label>
+          <input id="studentSignupRegNo" type="text" placeholder="Enter register number" required />
+
+          <label for="studentSignupPassword">Password</label>
+          <input id="studentSignupPassword" type="password" placeholder="Create password" required />
+
+          <button class="btn btn-primary" type="submit">Create Student Account</button>
+          <p id="studentSignupMessage" class="message"></p>
+        </form>
+        <a class="text-link" href="student-login.html">Already have an account? Login</a>
+        <a class="text-link" href="index.html">Back to Home</a>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

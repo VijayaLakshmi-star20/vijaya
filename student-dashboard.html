@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-wrap">
+      <header class="page-header">
+        <div>
+          <h1>Student Dashboard</h1>
+          <p id="studentWelcome" class="subtext">Track your learning momentum and submissions.</p>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-light" href="upload-assignment.html">Upload Assignment</a>
+          <a class="btn btn-secondary" href="student-results.html">Results Center</a>
+          <a class="btn btn-light" href="assignment-roadmap.html">Roadmap</a>
+          <a class="btn btn-outline logout-student" href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="card stat-card">
+          <h3>Total Assignments</h3>
+          <p id="studentTotalAssignments" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Submitted</h3>
+          <p id="studentSubmittedCount" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Pending</h3>
+          <p id="studentPendingCount" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Average Score</h3>
+          <p id="studentAverageScore" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Upcoming (3 days)</h3>
+          <p id="studentUpcomingCount" class="stat-value">0</p>
+        </article>
+      </section>
+
+      <section class="cards-grid">
+        <article class="card">
+          <h2 class="section-title">Upcoming Deadlines</h2>
+          <div id="studentUpcomingList" class="list-stack"></div>
+        </article>
+        <article class="card">
+          <h2 class="section-title">Performance Snapshot</h2>
+          <div id="studentPerformancePanel" class="list-stack"></div>
+        </article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Assignments List</h2>
+        <div class="toolbar card">
+          <input id="studentSearchInput" type="text" placeholder="Search assignment title" />
+          <select id="studentSubjectFilter">
+            <option value="all">All Subjects</option>
+          </select>
+          <select id="studentStatusFilter">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="submitted">Submitted</option>
+          </select>
+          <select id="studentSortFilter">
+            <option value="deadlineAsc">Deadline: Nearest</option>
+            <option value="deadlineDesc">Deadline: Farthest</option>
+            <option value="titleAsc">Title: A-Z</option>
+            <option value="priorityDesc">Priority: High First</option>
+          </select>
+        </div>
+        <article class="card progress-card">
+          <div class="progress-head">
+            <h3>Completion Progress</h3>
+            <p id="studentProgressText" class="subtext">0%</p>
+          </div>
+          <div class="progress-track">
+            <div id="studentProgressFill" class="progress-fill"></div>
+          </div>
+        </article>
+        <div id="studentAssignmentList" class="cards-grid"></div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

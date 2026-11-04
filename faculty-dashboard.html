@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-wrap">
+      <header class="page-header">
+        <div>
+          <h1>Faculty Dashboard</h1>
+          <p class="subtext">Operational insights, assignment planning, and review quality in one view.</p>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="create-assignment.html">Create Assignment</a>
+          <a class="btn btn-light" href="view-submissions.html">View Submissions</a>
+          <a class="btn btn-secondary" href="faculty-analytics.html">Analytics</a>
+          <a class="btn btn-light" href="assignment-studio.html">Assignment Studio</a>
+          <a class="btn btn-secondary" href="faculty-report.html">Faculty Report</a>
+          <a class="btn btn-outline logout-faculty" href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="card stat-card">
+          <h3>Assignments Created</h3>
+          <p id="facultyAssignmentCount" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Submissions Received</h3>
+          <p id="facultySubmissionCount" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Pending Review</h3>
+          <p id="facultyPendingReviewCount" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Average Score</h3>
+          <p id="facultyAverageScore" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>On-Time Rate</h3>
+          <p id="facultyOnTimeRate" class="stat-value">0%</p>
+        </article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Quick Actions</h2>
+        <div class="cards-grid">
+          <article class="card action-card">
+            <h3>Create New Assignment</h3>
+            <p>Add title, description, and deadline for students.</p>
+            <a class="btn btn-primary" href="create-assignment.html">Create Assignment</a>
+          </article>
+          <article class="card action-card">
+            <h3>Review Submissions</h3>
+            <p>Check uploaded files, give marks, and feedback.</p>
+            <a class="btn btn-secondary" href="view-submissions.html">View Submissions</a>
+          </article>
+          <article class="card action-card">
+            <h3>Assignment Studio</h3>
+            <p>Clone, tune deadlines, and manage assignment lifecycle.</p>
+            <a class="btn btn-light" href="assignment-studio.html">Open Studio</a>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Recent Assignments</h2>
+        <div id="facultyRecentAssignments" class="cards-grid"></div>
+      </section>
+
+      <section class="cards-grid">
+        <article class="card">
+          <h2 class="section-title">Top Subject</h2>
+          <p id="facultyTopSubject" class="stat-highlight">N/A</p>
+        </article>
+        <article class="card">
+          <h2 class="section-title">Recent Activity</h2>
+          <div id="facultyRecentActivity" class="list-stack"></div>
+        </article>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

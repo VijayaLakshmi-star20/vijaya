@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-wrap">
+      <header class="page-header">
+        <div>
+          <h1>Assignment Studio</h1>
+          <p class="subtext">A dedicated space to create, clone, shift, and maintain assignments.</p>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-light" href="faculty-dashboard.html">Dashboard</a>
+          <a class="btn btn-primary" href="create-assignment.html">Full Create Form</a>
+          <a class="btn btn-outline logout-faculty" href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2 class="section-title">Quick Create</h2>
+        <form id="studioQuickForm" class="form-grid">
+          <input id="studioTitle" type="text" placeholder="Assignment title" required />
+          <input id="studioSubject" type="text" placeholder="Subject" required />
+          <input id="studioDeadline" type="date" required />
+          <select id="studioPriority" required>
+            <option value="High">High</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+          </select>
+          <input id="studioMaxScore" type="number" min="1" max="100" value="10" required />
+          <button class="btn btn-primary" type="submit">Create in Studio</button>
+        </form>
+        <p id="studioMessage" class="message"></p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Manage Assignment Library</h2>
+        <div class="toolbar card">
+          <input id="studioSearchInput" type="text" placeholder="Search by title, subject, tags" />
+          <select id="studioSubjectFilter"><option value="all">All Subjects</option></select>
+          <select id="studioPriorityFilter">
+            <option value="all">All Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div id="studioAssignmentList" class="cards-grid"></div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

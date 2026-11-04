@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Roadmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-wrap">
+      <header class="page-header">
+        <div>
+          <h1>Assignment Roadmap</h1>
+          <p class="subtext">Visualize your delivery pipeline and deadline pressure.</p>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-light" href="student-dashboard.html">Dashboard</a>
+          <a class="btn btn-primary" href="upload-assignment.html">Upload</a>
+          <a class="btn btn-outline logout-student" href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="card stat-card">
+          <h3>Total</h3>
+          <p id="roadmapTotal" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Completed</h3>
+          <p id="roadmapCompleted" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Overdue</h3>
+          <p id="roadmapOverdue" class="stat-value">0</p>
+        </article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Delivery Timeline</h2>
+        <div class="toolbar card">
+          <select id="roadmapPriorityFilter">
+            <option value="all">All Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+          <select id="roadmapStatusFilter">
+            <option value="all">All Status</option>
+            <option value="submitted">Submitted</option>
+            <option value="pending">Pending</option>
+          </select>
+        </div>
+        <div id="roadmapList" class="list-stack"></div>
+      </section>
+
+      <section class="cards-grid">
+        <article class="card">
+          <h2 class="section-title">Deadline Radar</h2>
+          <div id="roadmapCalendarList" class="list-stack"></div>
+        </article>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

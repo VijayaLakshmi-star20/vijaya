@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-wrap">
+      <header class="page-header">
+        <div>
+          <h1>Faculty Analytics Nexus</h1>
+          <p class="subtext">Insight-rich lens on performance, timeliness, and review quality.</p>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-light" href="faculty-dashboard.html">Dashboard</a>
+          <a class="btn btn-primary" href="view-submissions.html">Review</a>
+          <a class="btn btn-outline logout-faculty" href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="card stat-card"><h3>Assignments</h3><p id="analyticsAssignments" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>Submissions</h3><p id="analyticsSubmissions" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>Reviewed</h3><p id="analyticsReviewed" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>Late</h3><p id="analyticsLate" class="stat-value">0</p></article>
+        <article class="card stat-card"><h3>On-Time Rate</h3><p id="analyticsOnTimeRate" class="stat-value">0%</p></article>
+        <article class="card stat-card"><h3>Average Score</h3><p id="analyticsAvgScore" class="stat-value">-</p></article>
+      </section>
+
+      <section class="cards-grid">
+        <article class="card">
+          <h2 class="section-title">Subject Intelligence</h2>
+          <div id="analyticsSubjectBoard" class="list-stack"></div>
+        </article>
+        <article class="card">
+          <h2 class="section-title">Assignment Performance Grid</h2>
+          <div id="analyticsAssignmentBoard" class="list-stack"></div>
+        </article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Weekly Submission Pulse</h2>
+        <article class="card">
+          <div id="analyticsWeeklyBoard" class="list-stack"></div>
+        </article>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

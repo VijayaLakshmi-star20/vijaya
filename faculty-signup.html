@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faculty Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="center-page">
+      <section class="card form-card">
+        <h1>Faculty Sign Up</h1>
+        <p class="subtext">Create a faculty account stored in MongoDB.</p>
+        <form id="facultySignupForm" class="form-grid">
+          <label for="facultySignupName">Name</label>
+          <input id="facultySignupName" type="text" placeholder="Enter your name" required />
+
+          <label for="facultySignupEmail">Email</label>
+          <input id="facultySignupEmail" type="email" placeholder="Enter email" required />
+
+          <label for="facultySignupPassword">Password</label>
+          <input id="facultySignupPassword" type="password" placeholder="Create password" required />
+
+          <button class="btn btn-primary" type="submit">Create Faculty Account</button>
+          <p id="facultySignupMessage" class="message"></p>
+        </form>
+        <a class="text-link" href="faculty-login.html">Already have an account? Login</a>
+        <a class="text-link" href="index.html">Back to Home</a>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Results Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-wrap">
+      <header class="page-header">
+        <div>
+          <h1>Student Results Center</h1>
+          <p class="subtext">Deep performance analytics and grading clarity.</p>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-light" href="student-dashboard.html">Dashboard</a>
+          <a class="btn btn-primary" href="upload-assignment.html">Upload</a>
+          <button id="exportStudentReport" class="btn btn-secondary" type="button">Export Report</button>
+          <a class="btn btn-outline logout-student" href="index.html">Logout</a>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="card stat-card">
+          <h3>Average Score</h3>
+          <p id="resultAverageScore" class="stat-value">-</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Best Score</h3>
+          <p id="resultBestScore" class="stat-value">-</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Reviewed</h3>
+          <p id="resultReviewedCount" class="stat-value">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Pending Review</h3>
+          <p id="resultPendingReview" class="stat-value">0</p>
+        </article>
+      </section>
+
+      <section class="cards-grid">
+        <article class="card">
+          <h2 class="section-title">Subject Performance</h2>
+          <div id="studentSubjectPerformance" class="list-stack"></div>
+        </article>
+        <article class="card">
+          <h2 class="section-title">Review Feedback Highlights</h2>
+          <div id="studentFeedbackHighlights" class="list-stack"></div>
+        </article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Gradebook</h2>
+        <div class="toolbar card">
+          <input id="resultSearchInput" type="text" placeholder="Search by title or subject" />
+          <select id="resultsSortFilter">
+            <option value="scoreDesc">Score High-Low</option>
+            <option value="scoreAsc">Score Low-High</option>
+            <option value="subjectAsc">Subject A-Z</option>
+            <option value="recent">Recently Submitted</option>
+          </select>
+        </div>
+        <div id="studentResultList" class="cards-grid"></div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
